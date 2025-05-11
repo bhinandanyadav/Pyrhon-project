@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- Defines the document type as HTML5 -->
+<html lang="en">
+<!-- Opening tag for the HTML document, setting the language to English -->
+
+<head>
+    <!-- The head section contains metadata and links to external resources -->
+    
+    <meta charset="UTF-8">
+    <!-- Specifies the character encoding for the document as UTF-8 -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures the webpage is responsive and adjusts to different screen sizes -->
+    
+    <title>Weather</title>
+    <!-- The title of the webpage, displayed in the browser tab -->
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- Links an external CSS file for styling the webpage -->
+</head>
+
+<body>
+    <!-- The body section contains the visible content of the webpage -->
+    
+    <div class="card">
+        <!-- A container (card) to hold all elements of the weather application -->
+
+        <div class="search">
+            <!-- A container for the search input field and button -->
+            
+            <input type="text" id="search" placeholder="Enter city name" spellcheck="false">
+            <!-- Input field where the user enters the city name; spellcheck disabled for names -->
+            
+            <button>
+                <img src="images/search.png">
+            </button>
+            <!-- Button for triggering the search, displaying an image of a search icon -->
+        </div>
+
+        <div class="error">
+            <!-- A container for displaying error messages (e.g., invalid city name) -->
+            
+            <p>Invalid city name</p>
+            <!-- Error message text that will be shown when an invalid city is entered -->
+        </div>
+
+        <div class="weather">
+            <!-- A container for displaying weather information once a valid city is searched -->
+            
+            <img src="images/rain.png" class="weather-icon" alt="">
+            <!-- Placeholder for weather icon (e.g., clouds, sun), with the "weather-icon" class -->
+
+            <h1 class="temp">22 °C </h1>
+            <!-- Displays the current temperature in Celsius, defaulting to 22°C -->
+
+            <h2 class="city">Kolkata</h2>
+            <!-- Displays the city name, defaulting to Kolkata -->
+
+            <div class="details">
+                <!-- Container for additional weather details (humidity, wind speed) -->
+                
+                <div class="col">
+                    <!-- A column for displaying humidity details -->
+
+                    <img src="images/humidity.png" alt="">
+                    <!-- Image icon for humidity -->
+
+                    <div>
+                        <!-- Container for humidity values and labels -->
+                        
+                        <p class="humidity">50%</p>
+                        <!-- Displays the humidity percentage, defaulting to 50% -->
+                        
+                        <p>Humidity</p>
+                        <!-- Label text indicating "Humidity" -->
+                    </div>
+                </div>
+
+                <div class="col">
+                    <!-- A column for displaying wind speed details -->
+
+                    <img src="images/wind.png" alt="">
+                    <!-- Image icon for wind speed -->
+
+                    <div>
+                        <!-- Container for wind speed values and labels -->
+                        
+                        <p class="wind">15 km/hr</p>
+                        <!-- Displays the wind speed, defaulting to 15 km/hr -->
+
+                        <p>Wind Speed</p>
+                        <!-- Label text indicating "Wind Speed" -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Links to the external JavaScript file (script.js) to handle the logic and API calls -->
+</body>
+</html>
