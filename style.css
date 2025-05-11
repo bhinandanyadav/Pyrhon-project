@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+/* 
+Resetting the margin and padding for all elements to 0. 
+Setting a consistent box-sizing to 'border-box' to include padding and border in the element's total width and height.
+Using the 'Poppins' font family for all text and setting a normal font style.
+*/
+
+body {
+    background-color: #222;
+}
+/* 
+Setting the background color of the webpage body to dark gray (#222) for a sleek, modern look.
+*/
+
+.card {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+}
+/* 
+Defining a card layout:
+- Setting a responsive width (90%) with a maximum width of 470px.
+- Applying a gradient background from #00feba (aqua) to #5b548a (purple).
+- Text color set to white.
+- Centered the card with margin and giving it rounded corners (20px radius).
+- Added padding of 40px for spacing inside the card and centered all text inside.
+*/
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 
+Search bar container:
+- Takes up full width (100%).
+- Using flexbox to align items (input and button) centrally in both vertical and horizontal directions.
+*/
+
+.search input {
+    border-radius: 50px;
+    border: 0;
+    outline: 0;
+    padding: 10px 25px;
+    height: 60px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+    background: #ebfffc;
+}
+/* 
+Styling the input field for city search:
+- Rounded corners with a 50px radius.
+- No visible border or outline.
+- Padding for internal spacing and height of 60px.
+- Takes up flexible space (flex: 1) inside the container.
+- Margin on the right to separate it from the button.
+- Font size set to 18px and background color set to a light aqua (#ebfffc).
+*/
+
+.search button {
+    background: #ebfffc;
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+/* 
+Styling the search button:
+- Circular button with 50% border radius.
+- Same background color as the input field.
+- No visible border or outline.
+- Fixed dimensions of 60x60px and a pointer cursor on hover.
+*/
+
+.search button img {
+    width: 16px;
+}
+/* 
+Styling the search icon inside the button, setting its width to 16px.
+*/
+
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+}
+/* 
+Weather icon styling:
+- Fixed width of 170px.
+- Adds a 30px margin on top to separate it from the other elements.
+*/
+
+.weather {
+    display: none;
+}
+/* 
+Initial state of the weather display is hidden (not visible).
+This section will be made visible dynamically via JavaScript when valid weather data is fetched.
+*/
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+/* 
+Styling for the temperature text:
+- Large font size (80px) and a medium font weight (500).
+*/
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+/* 
+Styling for the city name:
+- Font size of 45px and a regular font weight (400).
+- Negative margin-top to reduce the space between the city name and the temperature above it.
+*/
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    margin-top: 50px;
+}
+/* 
+Weather details container (humidity, wind speed):
+- Uses flexbox to align items centrally.
+- Space between the two columns (humidity and wind) is evenly distributed.
+- Padding applied to the sides, and a margin-top of 50px to create space above.
+*/
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+/* 
+Each column (humidity and wind):
+- Flexbox used to align items in a row and center vertically.
+- Text is aligned to the left.
+*/
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+/* 
+Icons for humidity and wind:
+- Fixed width of 40px, with 10px margin on the right to create space between the icon and text.
+*/
+
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 15px;
+    display: none;
+}
+/* 
+Error message styling:
+- Text aligned to the left with a small left margin (10px).
+- Font size set to 14px, with a margin-top to separate it from other elements.
+- Initially hidden and will be shown only when an invalid city is entered.
+*/
